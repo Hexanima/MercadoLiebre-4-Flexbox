@@ -1,0 +1,206 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap");
+
+/* Variables */
+:root {
+  /* Colores */
+  --amarillo: #eac926;
+  --azul: #03264c;
+  --celeste: #1259c3;
+  --gris-oscuro: #666;
+  --gris-claro: #ebebeb;
+  --verde: #39b54a;
+
+  /* Fuentes */
+  --fuentes: "Roboto", sans-serif;
+
+  /* Tamaños tipografia */
+  --parrafos: 12px;
+  --titulos: 24px;
+  --precio: 18px;
+  --descuento: 16px;
+  --descripcion: 16px;
+}
+
+/* Generales */
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: var(--fuentes);
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--gris-claro);
+}
+
+p {
+  font-size: var(--parrafos);
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+/* Header */
+
+header {
+  background-color: var(--amarillo);
+  padding: 25px 0;
+}
+
+header div.logo {
+  width: 130px;
+  margin-left: 25px;
+}
+
+header div.search {
+  margin-left: 15px;
+  width: 170px;
+  margin-bottom: 10px;
+}
+
+header div.search input {
+  display: block;
+}
+
+header div.search button {
+  display: block;
+}
+
+header p.compras-cuotas {
+  display: block;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+header nav {
+  margin-bottom: 10px;
+  display: none;
+}
+
+header nav ul.lista-superior {
+  margin-bottom: 15px;
+}
+
+header nav ul li a {
+  font-size: var(--parrafos);
+}
+
+header div.burger-menu {
+  background-color: var(--celeste);
+  border-radius: 5px;
+  color: var(--gris-claro);
+  width: 35px;
+  padding: 7px;
+  margin: 25px auto 0;
+  text-align: center;
+}
+
+/* Secciones */
+
+main.home__productos {
+  width: 90%;
+  margin: 0 auto;
+}
+
+main.home__productos section.seccion__productos {
+  width: 100%;
+}
+
+/* Productos */
+
+main.home__productos
+  section.seccion__productos
+  article.seccion__productos--tarjeta {
+  width: 100%;
+  margin: 10px auto;
+  border: 1px solid var(--gris-claro);
+  background-color: white;
+  padding: 15px;
+}
+
+main.home__productos
+  section.seccion__productos
+  article.seccion__productos--tarjeta
+  div.truck {
+  color: var(--verde);
+  border: var(--verde) 1px solid;
+  padding: 5px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+section.seccion__productos article.seccion__productos--tarjeta p.precio {
+  font-size: var(--precio);
+}
+
+section.seccion__productos article.seccion__productos--tarjeta p.descuento {
+  font-size: 14px;
+  color: var(--verde);
+}
+
+section.seccion__productos article.seccion__productos--tarjeta h5 {
+  margin-top: 15px;
+  font-size: 14px;
+  color: var(--gris-oscuro);
+  display: none;
+  font-weight: 400;
+}
+
+/* Footer*/
+
+footer {
+  background-color: white;
+  padding: 50px 10px 10px;
+}
+
+footer article {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+footer article i {
+  font-size: 2em;
+  color: var(--celeste);
+  margin-bottom: 10px;
+}
+
+footer span {
+  font-size: var(--parrafos);
+}
+
+/* Media Queries */
+
+@media (min-width: 361px) {
+  /* Header */
+
+  header nav {
+    display: inline-block;
+  }
+
+  header div.burger-menu {
+    display: none;
+  }
+
+  /* Cuerpo */
+
+  main.home__productos
+    section.seccion__productos
+    article.seccion__productos--tarjeta {
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+  }
+
+  section.seccion__productos article.seccion__productos--tarjeta h5 {
+    display: inline-block;
+  }
+}
+
+@media (min-width: 769px) {
+}
