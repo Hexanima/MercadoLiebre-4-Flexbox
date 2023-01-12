@@ -1,5 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap");
 
+/* Amarillo: #EAC926;
+Azul: #03264C;
+Celeste: #1259c3;
+Gris oscuro: #666;
+Gris claro: #ebebeb;
+Verde: #39b54a; */
+
 /* Variables */
 :root {
   /* Colores */
@@ -9,10 +16,8 @@
   --gris-oscuro: #666;
   --gris-claro: #ebebeb;
   --verde: #39b54a;
-
   /* Fuentes */
   --fuentes: "Roboto", sans-serif;
-
   /* Tamaños tipografia */
   --parrafos: 12px;
   --titulos: 24px;
@@ -27,7 +32,6 @@
   margin: 0;
   padding: 0;
   font-family: var(--fuentes);
-  box-sizing: border-box;
 }
 
 body {
@@ -80,8 +84,8 @@ header p.compras-cuotas {
 }
 
 header nav {
-  margin-bottom: 10px;
   display: none;
+  margin-bottom: 10px;
 }
 
 header nav ul.lista-superior {
@@ -96,62 +100,45 @@ header div.burger-menu {
   background-color: var(--celeste);
   border-radius: 5px;
   color: var(--gris-claro);
-  width: 35px;
+  width: 21px;
   padding: 7px;
   margin: 25px auto 0;
   text-align: center;
 }
 
-/* Secciones */
+/* Main */
 
 main.home__productos {
-  width: 90%;
+  width: 100%;
   margin: 0 auto;
 }
 
 main.home__productos section.seccion__productos {
-  width: 100%;
+  display: flex;
+  width: 90%;
+  margin: 10px auto;
+  gap: 10px;
+  flex-wrap: wrap;
 }
 
-/* Productos */
+main.home__productos section.seccion__productos h4.seccion__productos--titulo {
+  color: var(--gris-oscuro);
+  font-size: 20px
+}
 
 main.home__productos
   section.seccion__productos
   article.seccion__productos--tarjeta {
-  width: 100%;
-  margin: 10px auto;
-  border: 1px solid var(--gris-claro);
   background-color: white;
+  border: 1px solid var(--gris-claro);
   padding: 15px;
 }
 
 main.home__productos
   section.seccion__productos
   article.seccion__productos--tarjeta
-  div.truck {
-  color: var(--verde);
-  border: var(--verde) 1px solid;
-  padding: 5px;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-}
-
-section.seccion__productos article.seccion__productos--tarjeta p.precio {
-  font-size: var(--precio);
-}
-
-section.seccion__productos article.seccion__productos--tarjeta p.descuento {
-  font-size: 14px;
-  color: var(--verde);
-}
-
-section.seccion__productos article.seccion__productos--tarjeta h5 {
-  margin-top: 15px;
-  font-size: 14px;
-  color: var(--gris-oscuro);
+  h5 {
   display: none;
-  font-weight: 400;
 }
 
 /* Footer*/
@@ -176,20 +163,20 @@ footer span {
   font-size: var(--parrafos);
 }
 
-/* Media Queries */
+/* Media queries */
 
 @media (min-width: 361px) {
   /* Header */
 
   header nav {
-    display: inline-block;
+    display: inherit;
   }
 
   header div.burger-menu {
     display: none;
   }
 
-  /* Cuerpo */
+  /* Main */
 
   main.home__productos
     section.seccion__productos
@@ -197,8 +184,11 @@ footer span {
     box-shadow: 0px 0px 10px rgb(100, 100, 100);
   }
 
-  section.seccion__productos article.seccion__productos--tarjeta h5 {
-    display: inline-block;
+  main.home__productos
+    section.seccion__productos
+    article.seccion__productos--tarjeta
+    h5 {
+    display: inherit;
   }
 }
 
