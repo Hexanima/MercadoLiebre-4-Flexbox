@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap");
 
 /* Amarillo: #EAC926;
 Azul: #03264C;
@@ -32,6 +32,7 @@ Verde: #39b54a; */
   margin: 0;
   padding: 0;
   font-family: var(--fuentes);
+  box-sizing: border-box;
 }
 
 body {
@@ -55,41 +56,71 @@ a {
 
 header {
   background-color: var(--amarillo);
-  padding: 25px 0;
+  padding: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
 header div.logo {
-  width: 130px;
-  margin-left: 25px;
+  width: calc(50% - 2.5px);
 }
 
 header div.search {
-  margin-left: 15px;
-  width: 170px;
-  margin-bottom: 10px;
+  width: calc(50% - 2.5px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 }
 
 header div.search input {
+  outline: none;
+  padding: 7px;
   display: block;
+  width: 100%;
+  border: none;
+  background-color: white;
+  border-radius: 5px;
+  font-size: 0.75rem;
 }
 
 header div.search button {
+  position: absolute;
+  padding: 2px;
   display: block;
+  width: 20px;
+  border: none;
+  background-color: white;
+  color: var(--gris-oscuro);
+  border-radius: 5px;
+  font-size: 0.75rem;
+  right: 0;
 }
 
 header p.compras-cuotas {
   display: block;
+  margin-top: 10px;
+  width: 100%;
   text-align: center;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 
 header nav {
   display: none;
-  margin-bottom: 10px;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 15px;
+  width: 100%;
 }
 
-header nav ul.lista-superior {
-  margin-bottom: 15px;
+header nav ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
 }
 
 header nav ul li a {
@@ -100,30 +131,30 @@ header div.burger-menu {
   background-color: var(--celeste);
   border-radius: 5px;
   color: var(--gris-claro);
-  width: 21px;
+  width: 35px;
   padding: 7px;
-  margin: 25px auto 0;
+  margin: 10px auto 0;
   text-align: center;
 }
 
 /* Main */
 
 main.home__productos {
-  width: 100%;
+  width: 90%;
   margin: 0 auto;
+}
+
+main.home__productos h4.seccion__productos--titulo {
+  color: var(--gris-oscuro);
+  font-size: 20px;
 }
 
 main.home__productos section.seccion__productos {
   display: flex;
-  width: 90%;
   margin: 10px auto;
   gap: 10px;
   flex-wrap: wrap;
-}
-
-main.home__productos section.seccion__productos h4.seccion__productos--titulo {
-  color: var(--gris-oscuro);
-  font-size: 20px
+  justify-content: space-between;
 }
 
 main.home__productos
@@ -132,13 +163,69 @@ main.home__productos
   background-color: white;
   border: 1px solid var(--gris-claro);
   padding: 15px;
+  width: 100%;
+}
+
+main.home__productos
+  section.seccion__productos
+  article.seccion__productos--tarjeta
+  div.img {
+  position: relative;
+}
+
+main.home__productos
+  section.seccion__productos
+  article.seccion__productos--tarjeta
+  div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+main.home__productos
+  section.seccion__productos
+  article.seccion__productos--tarjeta
+  p.precio {
+  flex-grow: 0.3;
+  font-weight: 400;
+  font-size: 15px;
+}
+
+main.home__productos
+  section.seccion__productos
+  article.seccion__productos--tarjeta
+  p.descuento {
+  font-size: 13px;
+  flex-grow: 0.7;
+  color: var(--verde);
+  font-weight: 400;
 }
 
 main.home__productos
   section.seccion__productos
   article.seccion__productos--tarjeta
   h5 {
+  width: 100%;
   display: none;
+}
+
+main.home__productos
+  section.seccion__productos
+  article.seccion__productos--tarjeta
+  i {
+  display: block;
+  font-size: 16px;
+  padding: 5px;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #39b54a;
+  background-color: #fff;
+  color: var(--verde);
+  border-radius: 50%;
+  position: absolute;
+  right: 0px;
+  bottom: 0;
 }
 
 /* Footer*/
@@ -169,11 +256,41 @@ footer span {
   /* Header */
 
   header nav {
-    display: inherit;
+    display: flex;
+    flex-direction: row;
+  }
+
+  header nav ul {
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
   }
 
   header div.burger-menu {
     display: none;
+  }
+
+  header div.logo {
+    width: calc(25% - 5px);
+  }
+
+  header div.search {
+    display: flex;
+    gap: 10px;
+    width: calc(50% - 5px);
+  }
+
+  header div.search input {
+    border-bottom: 1px solid var(--gris-oscuro);
+  }
+
+  header div.search button {
+    padding: 7px;
+    width: 30px;
+    border-bottom: 1px solid var(--gris-oscuro);  }
+
+  header p.compras-cuotas {
+    width: calc(25% - 5px);
   }
 
   /* Main */
@@ -182,6 +299,7 @@ footer span {
     section.seccion__productos
     article.seccion__productos--tarjeta {
     box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    width: calc(50% - 10px);
   }
 
   main.home__productos
@@ -189,8 +307,15 @@ footer span {
     article.seccion__productos--tarjeta
     h5 {
     display: inherit;
+    color: var(--gris-oscuro);
+    font-weight: 500;
   }
 }
 
 @media (min-width: 769px) {
+  main.home__productos
+    section.seccion__productos
+    article.seccion__productos--tarjeta {
+    width: calc(25% - 10px);
+  }
 }
