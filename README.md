@@ -18,6 +18,8 @@ En esta etapa utilizamos Flexbox para facilitarnos acomodar las listas de produc
 
 [5 - Formularios](https://github.com/Hexanima/MercadoLiebre-5-Formularios)
 
+[6 - Organizando Elementos](https://github.com/Hexanima/MercadoLiebre-6-Organizando)
+
 ## Como usar
 
 Luego de descargar los archivos, hay que ejecutar el siguiente comando desde la carpeta principal.
