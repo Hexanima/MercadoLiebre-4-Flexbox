@@ -4,7 +4,7 @@ Proyecto de sitio web para Digital House.
 
 ## Etapa actual - Flexbox
 
-En esta etapa hacemos que el sitio se adapte al tamaño de las pantallas, o mejor dicho, que se adapte a celular tablet y computadoras.
+En esta etapa utilizamos Flexbox para facilitarnos acomodar las listas de productos de forma rapida, sencilla, y adaptable a la cantidad de productos.
 
 ## Progreso
 
@@ -15,6 +15,8 @@ En esta etapa hacemos que el sitio se adapte al tamaño de las pantallas, o mejo
 [3 - Diseño adaptativo](https://github.com/Hexanima/MercadoLiebre-3-Adaptativo)
 
 [4 - Flexbox](https://github.com/Hexanima/MercadoLiebre-4-Flexbox)
+
+[5 - Formularios](https://github.com/Hexanima/MercadoLiebre-5-Formularios)
 
 ## Como usar
 
